@@ -8,4 +8,4 @@ app.use(cors());
 
 app.use(express.json());
 
-app.listen(process.env.PORT || 4000, () => console.log(gradient.instagram('Server is surfin on port 4000')));
+app.listen(process.env.PORT || 4000, () => console.log(gradient.instagram('Server is toasting it up on port 4000')));
