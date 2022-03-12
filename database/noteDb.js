@@ -4,7 +4,8 @@ module.exports = {
   createNote,
   deleteNote,
   editNote,
-  getNote
+  getNote,
+  getNotes
 }
 
 async function createNote(note) {
@@ -27,4 +28,9 @@ async function editNote({id, payload}) {
 async function getNote(id) {
   await connection.init()
   return await models.note.findById({ _id: id })
+}
+
+async function getNotes() {
+  await connection.init()
+  return await models.note.find({})
 }
